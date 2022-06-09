@@ -3,7 +3,7 @@ import React, { FormEvent, useCallback, useState } from 'react';
 import InputMask from '../src/components/InputMask';
 import { api } from '../services/api';
 
-import { Container } from './styles'
+import Container  from './styles'
 import Head from 'next/head';
 
 
