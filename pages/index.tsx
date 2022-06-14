@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import React, { FormEvent, useCallback, useState } from 'react';
 import InputMask from '../src/components/InputMask';
 import { api } from '../services/api';
@@ -146,6 +146,14 @@ const Home: NextPage = () => {
       </Container>
       </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24  * 364, // 24 Hours
+  }
 }
 
 export default Home
